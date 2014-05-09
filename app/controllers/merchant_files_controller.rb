@@ -1,4 +1,6 @@
 class MerchantFilesController < ApplicationController
+  http_basic_authenticate_with name: "lscc", password: "lscc", except: [:new]
+
   before_action :merchant_files
 
   def new
