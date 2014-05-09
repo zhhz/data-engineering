@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140509223735) do
+ActiveRecord::Schema.define(version: 20140509230625) do
 
   create_table "items", force: true do |t|
     t.integer  "merchant_id"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20140509223735) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "total",      precision: 10, scale: 0
   end
 
   create_table "merchants", force: true do |t|
