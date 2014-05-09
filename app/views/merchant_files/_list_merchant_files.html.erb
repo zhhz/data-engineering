@@ -2,13 +2,15 @@
   <h1>Uploaded merchant files</h1>
   <table>
     <tr>
-      <th>Title</th>
-      <th>total</th>
+      <th>Merchant File</th>
+      <th>Uploaded At</th>
+      <th>Gross Revenue</th>
     </tr>
     <% @merchant_files.each do |mf| %>
       <tr>
         <td><%= mf.name %></td>
-        <td><%= '11' %></td>
+        <td><%= mf.created_at %></td>
+        <td><%= number_to_currency mf.total %></td>
       </tr>
     <% end %>
   </table>
