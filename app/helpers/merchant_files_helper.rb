@@ -1,0 +1,2 @@
+module MerchantFilesHelper
+end

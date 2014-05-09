@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  resources :merchant_files
+
+  root 'merchant_files#new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,15 @@
+﻿<% if @merchant_files.size > 0 %>
+  <h1>Uploaded merchant files</h1>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>total</th>
+    </tr>
+    <% @merchant_files.each do |mf| %>
+      <tr>
+        <td><%= mf.name %></td>
+        <td><%= '11' %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>

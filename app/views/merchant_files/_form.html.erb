@@ -1,0 +1,15 @@
+﻿<%= form_for @merchant_file do |f| %>
+  <% if @merchant_file.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@merchant_file.errors.count, "error") %> prohibited this merchant file from being uploaded:</h2>
+      <ul>
+        <% @merchant_file.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.file_field :file %>
+  <%= f.submit %>
+<% end %>
