@@ -24,6 +24,6 @@ class MerchantFilesController < ApplicationController
     end
 
     def merchant_files
-      @merchant_files = MerchantFile.all
+      @merchant_files = MerchantFile.order(created_at: :desc)
     end
 end
