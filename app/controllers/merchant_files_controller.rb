@@ -7,9 +7,11 @@ class MerchantFilesController < ApplicationController
 
   def create
     mf = merchant_file
-    flash[:notice] = mf.original_filename
-    @merchant_file = MerchantFile.new(name: mf.original_filename)
+
+    total = MerchantFile.process_file mf.tempfile
+    @merchant_file = MerchantFile.new(name: mf.original_filename, total: total)
     @merchant_file.save
+    flash[:notice] = total
 
     render :new
   end
