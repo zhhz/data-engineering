@@ -2,7 +2,7 @@
 # LSCC
 LivingSocial Coding Challenge
 
-![lscc](https://raw.github.com/zhhz/data-engineering/master/lscc.png)
+![lscc](https://github.com/zhhz/data-engineering/blob/master/lscc.png)
 
 ## Requirements
 This application was created and tested using OS X 10.9.2, Ruby 2.0.0p451, Rails 4.1.1, MySQL 5.6.16.
@@ -22,7 +22,7 @@ Modify ``` config/database.yml```
 Create DB
 ``` shell
 $ msyql -uroot -ppassword
-> mysql create database lscc_development character set utf8;
+mysql> create database lscc_development character set utf8;
 ```
 or you can
 ``` shell
@@ -40,3 +40,8 @@ rails server
 ```
 
 Go to localhost:3000
+
+For the basic authentication
+```
+username/password = lscc/lscc
+```
