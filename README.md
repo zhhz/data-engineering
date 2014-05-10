@@ -17,14 +17,17 @@ bundle install
 ```
 
 Configuration
-Modify ``` config/database.yml```
+
+``` shell
+config/database.yml
+```
 
 Create DB
 ``` shell
 $ msyql -uroot -ppassword
 mysql> create database lscc_development character set utf8;
 ```
-or you can
+or
 ``` shell
 rake db:create
 ```
