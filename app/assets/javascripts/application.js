@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  $("#merchant_file_file").change(function(){
+      if($(this).val() !== ''){
+        $("#submit-btn").removeAttr('disabled');
+      }
+  });
+});
