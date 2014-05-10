@@ -13,7 +13,7 @@ class MerchantFilesController < ApplicationController
     total = MerchantFile.process_file mf.tempfile
     @merchant_file = MerchantFile.new(name: mf.original_filename, total: total)
     @merchant_file.save
-    flash[:notice] = total
+    flash[:info] = "The total amount gross revenue represented by the uploaded file was #{number_to_currency(total)}."
 
     render :new
   end

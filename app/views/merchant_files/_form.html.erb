@@ -1,6 +1,6 @@
-﻿<%= form_for @merchant_file do |f| %>
+﻿<%= form_for(@merchant_file, html: {class: 'form'}) do |f| %>
   <% if @merchant_file.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="alert alert-danger">
       <h2><%= pluralize(@merchant_file.errors.count, "error") %> prohibited this merchant file from being uploaded:</h2>
       <ul>
         <% @merchant_file.errors.full_messages.each do |msg| %>
@@ -10,6 +10,11 @@
     </div>
   <% end %>
 
-  <%= f.file_field :file %>
-  <%= f.submit %>
+  <div class="form-group well">
+    <label>Mechant File</label>
+    <%= f.file_field :file %>
+  </div>
+  <button type="submit" class="btn btn-primary btn-lg">
+    <span class="glyphicon glyphicon-cloud-upload"></span> Upload
+  </button>
 <% end %>

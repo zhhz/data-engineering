@@ -1,6 +1,10 @@
-﻿<p id="notice"><%= notice %></p>
+﻿<% flash.each do |name, msg| %>
+  <% if msg.is_a?(String) %>
+    <%= content_tag :div, msg, :class => "alert alert-#{name}" %>
+  <% end %>
+<% end %>
 
-<h1>Upload Merchant File</h1>
+<h2>Upload Merchant File</h2>
 
 <%= render 'form' %>
 <%= render 'list_merchant_files' %>
